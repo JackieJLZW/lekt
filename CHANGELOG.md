@@ -2,6 +2,19 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.3.0] — 2026-11-24
+### Added & Improved
+- **Interactive Form Remediation (`<Form>` OBJR & `/TU` Tooltips):** New Forms panel + Tier-1 auto-fix nests widget annotations inside `<Form>` structure elements in original order and edits missing `/TU` accessible tooltips cleanly (preserving static print-only form fields).
+- **Table `RowSpan`/`ColSpan` Editor & Unwrap Layout Tables:** Edit merged cell spans directly in the visual Tables inspector and unwrap decorative layout tables to `<Div>` without losing draft edits.
+- **Full WCAG 2.2 Machine Validation:** Bundled `org.verapdf:wcag-validation:1.30.4` (`WCAG-2-2MACHINE.xml`) directly inside the offline JRE engine alongside PDF/UA-1 and PDF/UA-2.
+- **Selective Hybrid-PDF Offline OCR:** Detects scanned pages inside mixed vector/scanned PDFs and runs Apple Vision / Windows WinRT offline OCR strictly on scanned pages so existing vector tables and forms stay intact.
+- **Full-Text Search (`Cmd/Ctrl+F`) & Adaptive Zoom:** Added fast local search across multi-page PDFs with highlight overlays, forward/reverse navigation, and Fit Width / Fit Page zoom modes.
+- **Clear Automated vs. Human-Review Batch Reports:** Batch UI, CSV, and HTML reports now clearly distinguish `MACHINE_PASS` / `NEEDS_FIX` / `ERROR` from required human review items and always record renamed output paths.
+### Hardened
+- **Enforced 0-Pixel Visual Diff Gate:** Single-file and batch exports enforce 0 changed pixels before committing outputs.
+- **macOS & Windows File Association ("Open With"):** Fixed cold-start and hot-start PDF opening queues across macOS Launch Services and Windows Explorer.
+- **Unsaved Draft Protection:** Preserves cross-panel drafts across revalidation and prompts before discarding pending edits or installing app updates.
+
 ## [1.2.2] — 2026-11-23
 ### Added & Improved
 - **Pure Native Apple Silicon (`arm64`) Runtime:** Replaced the bundled macOS JRE with self-contained Eclipse Temurin 17 `aarch64`, eliminating Rosetta 2 translation and macOS 28 deprecation warnings while cutting packaged self-test cold-start + validation + OCR time down to ~2.2 seconds.

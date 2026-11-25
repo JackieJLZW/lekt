@@ -2,6 +2,14 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.4.0] — 2026-11-25
+### Added & Improved
+- **Native Vector Auto-Tag (Zero Raster OCR) + Smart Hybrid Routing:** Untagged digital PDFs exported from Word, PowerPoint, LaTeX, or InDesign are now tagged directly in-stream (`VectorAutoTagger`) by wrapping existing vector text-showing operators, lists (`<L>` → `<LI>` → `<LBody>`), headings (`<H1>`–`<H3>`), figures, `<Link>` annotations, and `<Form>` widgets with automatic multi-page running header/footer `/Artifact` pagination detection—producing zero OCR typos and verified 0px visual diff at 150 DPI. Hybrid untagged PDFs automatically vector-tag digital pages and run offline OS OCR solely on scanned pages in one unified `/StructTreeRoot`.
+- **Clause `7.1-3` (Matterhorn `01-005`) Untagged Content Canvas Highlighter & 1-Click `/Artifact`:** Extracts normalized bounding boxes for stray unmarked text, vector paths, and images on tagged PDFs, renders red dashed highlights directly on the PDFium canvas, and wraps unmarked content into `/Artifact BMC...EMC` per-page or document-wide (including mixed `BT...ET` text objects and nested Form XObjects) with 0px visual diff.
+- **Damaged XRef / `%%EOF` Trailer Parser Recovery (`veraPDF` `#1657` / `#1658`):** PDFs with Acrobat hybrid XRef loops or trailing bytes after `%%EOF` that trip strict Greenfield parsing now open cleanly in Parser Recovery Mode (`01-PARSER`) and rebuild a clean standard cross-reference table via 1-Click Auto-Fix.
+- **PDF/UA-2 (`ISO 14289-2:2024`) PDF 2.0 & Namespace Binding:** Automatically upgrades `%PDF-2.0` / Catalog `/Version /2.0` and binds standard structure elements to `http://iso.org/pdf2/ssn` when remediating against `PDF/UA-2`.
+- **WCAG 2.2 AA Self-Accessibility (VPAT Dogfooding) & Native OS Lifecycle:** Added keyboard focus + `Enter`/`Space` activation across Screen Reader, Reading Order (`Alt+↑/↓` keyboard reorder), Alt-Text, and Forms cards; full ARIA `tablist`/`tabpanel` roving focus without arrow-key page-turn hijacking; ≥ 4.5:1 muted text contrast; `prefers-reduced-motion` & Windows High Contrast (`forced-colors`) support; macOS Dock `Reopen` after `Cmd+W`; and Windows single-instance CLI `.pdf` forwarding.
+
 ## [1.3.0] — 2026-11-24
 ### Added & Improved
 - **Interactive Form Remediation (`<Form>` OBJR & `/TU` Tooltips):** New Forms panel + Tier-1 auto-fix nests widget annotations inside `<Form>` structure elements in original order and edits missing `/TU` accessible tooltips cleanly (preserving static print-only form fields).

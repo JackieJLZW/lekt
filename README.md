@@ -1,9 +1,9 @@
 # Lekt — 100% Offline PDF/UA-1, PDF/UA-2 & WCAG 2.2 Accessibility Checker & Visual Remediator
 
-[![Website](https://img.shields.io/badge/Website-lekt.jianlanzhiwei.com-059669)](https://lekt.jianlanzhiwei.com/)
-[![Latest Release](https://img.shields.io/badge/Release-v1.4.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
-[![Platforms](https://img.shields.io/badge/Platforms-macOS%20Apple%20Silicon%20%7C%20Windows%20x64-1d4ed8)](https://lekt.jianlanzhiwei.com/#download)
-[![Offline](https://img.shields.io/badge/Processing-100%25%20Offline%20%7C%200%20Telemetry-065f46)](https://lekt.jianlanzhiwei.com/privacy)
+[![Website](https://img.shields.io/badge/Website-lektpdf.com-059669)](https://lektpdf.com/)
+[![Latest Release](https://img.shields.io/badge/Release-v1.5.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
+[![Platforms](https://img.shields.io/badge/Platforms-macOS%20Apple%20Silicon%20%7C%20Windows%20x64-1d4ed8)](https://lektpdf.com/#download)
+[![Offline](https://img.shields.io/badge/Processing-100%25%20Offline%20%7C%200%20Telemetry-065f46)](https://lektpdf.com/privacy)
 
 **Lekt** is a native **macOS (Apple Silicon, pure `arm64`)** and **Windows x64** desktop workstation for checking and remediating **ISO 14289-1 (PDF/UA-1)**, **ISO 14289-2 (PDF/UA-2)**, and **WCAG 2.2** PDF accessibility—powered locally by **veraPDF 1.30.4**, **Apache PDFBox 3.0.8**, **BSD-3 PDFium**, **Native Vector Auto-Tagging (0 OCR)**, and native OS offline OCR (**Apple Vision** / **Windows WinRT OCR**).
 
@@ -22,28 +22,28 @@
 
 ---
 
-## Direct Signed Downloads (`v1.4.0`)
+## Direct Signed Downloads (`v1.5.0`)
 
 | Platform | Installer | Signing & Verification | Direct Download |
 | --- | --- | --- | --- |
-| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.4.0_aarch64.dmg` (60.2 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lekt.jianlanzhiwei.com/download/macos) |
-| **Windows 10/11 x64 (Standard)** | `Lekt_1.4.0_x64-setup.exe` (56.0 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lekt.jianlanzhiwei.com/download/windows) |
-| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.4.0_x64_en-US.msi` (60.9 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lekt.jianlanzhiwei.com/download/windows-msi) |
-| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.4.0 artifacts | [View SHA256SUMS.txt](https://lekt.jianlanzhiwei.com/download/SHA256SUMS.txt) |
+| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.5.0_aarch64.dmg` (59.4 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lektpdf.com/download/macos) |
+| **Windows 10/11 x64 (Standard)** | `Lekt_1.5.0_x64-setup.exe` (56.1 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lektpdf.com/download/windows) |
+| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.5.0_x64_en-US.msi` (60.9 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lektpdf.com/download/windows-msi) |
+| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.5.0 artifacts | [View SHA256SUMS.txt](https://lektpdf.com/download/SHA256SUMS.txt) |
 
-### Verify Download Checksums (`v1.4.0`)
+### Verify Download Checksums (`v1.5.0`)
 
 ```text
-4fd0a43e792402431f1e373b5079ad776382b00d36c3ffbcc44bffa77fc69098  Lekt_1.4.0_aarch64.dmg
-80ecf578f71b7dfa3a93fe85ac2a6513c9b6d59eeb6b5fae23444dccec157122  Lekt_1.4.0_x64-setup.exe
-1e0a276db23ed8c752b59d41d227e6f549b0bec4e5be75e690f454dda3aa3eb7  Lekt_1.4.0_x64_en-US.msi
+6d8af871dd6764648adcebf89e41213d56c86a7e5451ffccdd27d824343b2d20  Lekt_1.5.0_aarch64.dmg
+07c1e5f3fc683bfcdcc18eabffb56ecf208576da7f48f175737ab7901e40ba67  Lekt_1.5.0_x64-setup.exe
+afe5eadd5f0828610998ac2b54af36b552cce4e3b97dac437eb1de892933f031  Lekt_1.5.0_x64_en-US.msi
 ```
 
 ---
 
 ## Feature & Tool Comparison
 
-| Capability | Lekt v1.4.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
+| Capability | Lekt v1.5.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
 | --- | --- | --- | --- | --- | --- |
 | **macOS Apple Silicon Native** | Yes (pure `arm64`) | No (Windows only) | Yes | Yes | No (Windows only) |
 | **Windows x64 Native** | Yes | Yes | Yes | Yes | Yes |
@@ -54,7 +54,7 @@
 | **1-Click Auto-Fix + `/Artifact` (0px Diff)** | Yes (Personal Pro) | Check only | Manual tag tree | Yes | Yes |
 | **Hybrid & Selective Offline OS OCR (2-Column)** | Yes (Apple Vision / WinRT) | No | Yes | Add-on | Add-on |
 | **Folder Batch (500 PDFs) + Reports** | Yes (Team & Batch) | Single file | Action Wizard | Yes | Enterprise add-on |
-| **Pricing** | **Free Checker**; $39 one-time Pro / $99/yr Team (3 seats) | Free | ~$240/yr | ~$599+/yr | ~$1,199+/yr |
+| **Pricing** | **Free Checker**; $89 one-time Pro / $199/yr Team (3 seats) | Free | ~$240/yr | ~$599+/yr | ~$1,199+/yr |
 
 > **Automated vs. Human Verification Scope:** Like PAC and veraPDF, Lekt's automated validation evaluates **machine-checkable** ISO 14289-1 (PDF/UA-1), ISO 14289-2 (PDF/UA-2), and WCAG 2.2 rules. Passing automated checks with 0 errors does not replace human accessibility review—heading hierarchy semantics, table header announcements, alt-text accuracy, and multi-column reading order still require human review using Lekt's **Screen Reader Preview**, **Reading Order**, **Tables**, and **Alt-Text** panels (and assistive technology testing).
 
@@ -62,18 +62,18 @@
 
 ## Documentation & Guides
 
-- [PAC Alternative for Mac (Native Apple Silicon Guide)](https://lekt.jianlanzhiwei.com/pac-alternative-for-mac)
-- [How to Fix the 7 Most Common PAC & veraPDF PDF/UA Errors](https://lekt.jianlanzhiwei.com/verapdf-pac-error-fixes)
-- [ADA Title II & FERPA Offline PDF Remediation Comparison](https://lekt.jianlanzhiwei.com/ada-title-ii-offline-pdf-remediation)
+- [PAC Alternative for Mac (Native Apple Silicon Guide)](https://lektpdf.com/pac-alternative-for-mac)
+- [How to Fix the 7 Most Common PAC & veraPDF PDF/UA Errors](https://lektpdf.com/verapdf-pac-error-fixes)
+- [ADA Title II & FERPA Offline PDF Remediation Comparison](https://lektpdf.com/ada-title-ii-offline-pdf-remediation)
 - [ISO 14289-1 (PDF/UA-1) Error Reference](./docs/pdf-ua-error-reference.md)
 - [Changelog](./CHANGELOG.md)
 - [Security & Offline Architecture](./SECURITY.md)
-- [Privacy Policy](https://lekt.jianlanzhiwei.com/privacy)
+- [Privacy Policy](https://lektpdf.com/privacy)
 
 ---
 
 ## Support & Contact
 
 - **Bug reports & PDF/UA rule feedback:** Open an issue in [GitHub Issues](https://github.com/JackieJLZW/lekt/issues)
-- **Email & Institutional / Purchase Order Quotes:** `support@jianlanzhiwei.com`
-- **Website & Self-Service Seat Portal:** [https://lekt.jianlanzhiwei.com/](https://lekt.jianlanzhiwei.com/)
+- **Email & Institutional / Purchase Order Quotes:** `support@lektpdf.com`
+- **Website & Self-Service Seat Portal:** [https://lektpdf.com/](https://lektpdf.com/)

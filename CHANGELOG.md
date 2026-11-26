@@ -2,6 +2,12 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.5.0] — 2026-11-26
+### Added & Improved
+- **Free Ephemeral 1-Click Fix Preview (`previewAutofix`):** Free Checker users can now test Lekt's full remediation engine (Native Vector Auto-Tag + Tier-1 Safe Auto-Fix + 150 DPI PDFium 0px visual diff verification) on any digital PDF inside an isolated ephemeral buffer—verifying exact post-fix veraPDF rule/check counts without touching the active document.
+- **Canonical Domain Migration (`lektpdf.com`) & Dual Updater Failover:** Official website, Self-Service Seat Portal, and installer downloads now live at `https://lektpdf.com` (`support@lektpdf.com`) with seamless backwards-compatible updater/activation pass-through on `lekt.jianlanzhiwei.com`.
+- **Mac App Store (`--features mas`) Native StoreKit 2 Edition:** Added an isolated App Sandbox + StoreKit 2 build profile (`npm run release:mas`) with zero external checkout/license/updater dependencies.
+
 ## [1.4.0] — 2026-11-25
 ### Added & Improved
 - **Native Vector Auto-Tag (Zero Raster OCR) + Smart Hybrid Routing:** Untagged digital PDFs exported from Word, PowerPoint, LaTeX, or InDesign are now tagged directly in-stream (`VectorAutoTagger`) by wrapping existing vector text-showing operators, lists (`<L>` → `<LI>` → `<LBody>`), headings (`<H1>`–`<H3>`), figures, `<Link>` annotations, and `<Form>` widgets with automatic multi-page running header/footer `/Artifact` pagination detection—producing zero OCR typos and verified 0px visual diff at 150 DPI. Hybrid untagged PDFs automatically vector-tag digital pages and run offline OS OCR solely on scanned pages in one unified `/StructTreeRoot`.

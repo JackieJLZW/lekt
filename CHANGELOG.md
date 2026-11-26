@@ -2,6 +2,12 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.7.0] — 2026-11-26
+### Added & Improved
+- **Free Watermarked Proof PDF Export (`exportProofPdf`):** Free Checker users can now run Lekt's full offline automated remediation (**Native Vector Auto-Tag**, **Offline OS OCR**, and **1-Click Safe Auto-Fix**) on any PDF and export a real remediated Proof PDF (`Cmd/Ctrl+Shift+P`). Every verification curve is rendered as pure cubic-Bezier glyph outlines (`BlendMode.MULTIPLY`, zero text operators, zero font dependencies) strictly wrapped inside ISO 14289 `/Artifact BMC...EMC`—allowing independent `0`-error verification in **PAC 2024**, **Adobe Acrobat Pro Accessibility Full Check**, **veraPDF**, and **NVDA/JAWS** with zero screen-reader noise and zero WCAG 2.2 contrast regressions before purchasing.
+- **5-Layer Anti-Tamper Proof Architecture:** Flattens each Proof PDF page into a single Flate `COSStream`, interleaves `/Artifact` shards across tagged elements, emits 150+ disjoint per-glyph subpaths per page, stamps synchronized XMP `dc:title`, and entangles exact IEEE-754 dyadic `CTM` coordinate shifts so automated `/Artifact`-stripping scripts scramble page layout while unmodified files render at `0.0pt` drift.
+- **macOS App Sandbox Security-Scoped Bookmarks & Cold-Start File Open:** Persists `NSURLBookmarkCreationWithSecurityScope` (`com.apple.security.files.bookmarks.app-scope`) tokens across app restarts for Recent Files and hardens cold-start Finder `"Open With"` lifecycle handling.
+
 ## [1.6.0] — 2026-11-26
 ### Added & Improved
 - **Deep Nested Reading Order & Slot-Preserving Reorder:** Removed the legacy `depth <= 3` cap in `PdfInspector` and `ReadingOrderPanel`, surfacing deeply nested block structures (`Part › Sect › Div › P`) with container breadcrumb badges while keeping unmentioned inline siblings (`<Span>`, `<Link>`, `<Annot>`) pinned at their exact original `/K` slot indices.

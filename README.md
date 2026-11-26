@@ -1,8 +1,9 @@
 # Lekt — 100% Offline PDF/UA-1, PDF/UA-2 & WCAG 2.2 Accessibility Checker & Visual Remediator
 
 [![Website](https://img.shields.io/badge/Website-lektpdf.com-059669)](https://lektpdf.com/)
-[![Latest Release](https://img.shields.io/badge/Release-v1.5.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
+[![Latest Release](https://img.shields.io/badge/Release-v1.6.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20Apple%20Silicon%20%7C%20Windows%20x64-1d4ed8)](https://lektpdf.com/#download)
+[![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-XP8BTZ1QSKF5HH-0078d4)](https://apps.microsoft.com/store/detail/XP8BTZ1QSKF5HH)
 [![Offline](https://img.shields.io/badge/Processing-100%25%20Offline%20%7C%200%20Telemetry-065f46)](https://lektpdf.com/privacy)
 
 **Lekt** is a native **macOS (Apple Silicon, pure `arm64`)** and **Windows x64** desktop workstation for checking and remediating **ISO 14289-1 (PDF/UA-1)**, **ISO 14289-2 (PDF/UA-2)**, and **WCAG 2.2** PDF accessibility—powered locally by **veraPDF 1.30.4**, **Apache PDFBox 3.0.8**, **BSD-3 PDFium**, **Native Vector Auto-Tagging (0 OCR)**, and native OS offline OCR (**Apple Vision** / **Windows WinRT OCR**).
@@ -18,32 +19,34 @@
 - **100% Offline & Air-Gapped Safe:** Zero PDF files, extracted text, images, or usage telemetry ever leave your device. Built for **FERPA**, **HIPAA**, **ADA Title II**, **EU EAA**, legal, and municipal workflows.
 - **0px Visual Diff + Damaged XRef Recovery:** Every remediation enforces a 150 DPI 0-pixel visual diff gate, and files with broken Acrobat hybrid XRef tables or trailing bytes after `%%EOF` open cleanly in Parser Recovery Mode for 1-click XRef normalization.
 - **Hybrid & Selective Offline OS OCR (2-Column):** Auto-tag scanned/image-only pages using Apple Vision (macOS) or Windows WinRT OCR with automatic 2-column academic layout detection—preserving vector tables and forms on digital pages.
-- **Visual Remediation & WCAG 2.2 AA Accessible UI:** Drag-and-drop or keyboard (`Alt+↑/↓`) reading order, inline semantic re-tagging (`P` ↔ `H1`–`H6`), 1-click `7.1-3` Untagged → `/Artifact`, Table `<TH>`/`<TD>` + `Scope` + `RowSpan`/`ColSpan` grid inspector, Unwrap layout tables, Form `<Form>`/`/TU` editor, Batch Figure Alt-Text drawer, and 500-PDF Folder Batch Auditor.
+- **Visual Remediation & WCAG 2.2 AA Accessible UI:** Deep nested reading order (`Part › Sect › Div`) with drag-and-drop or keyboard (`Alt+↑/↓`) reorder, multi-select batch semantic re-tagging (`P` ↔ `H1`–`H6`), lossless `<L>` list & cross-page `<P>` merge, `<Div>` container unwrap, named unlimited Undo/Redo, 1-click `7.1-3` Untagged → `/Artifact`, Table `<TH>`/`<TD>` + `Scope` + `RowSpan`/`ColSpan` grid inspector, Unwrap layout tables, Form `<Form>`/`/TU` editor, Batch Figure Alt-Text drawer, and 500-PDF Folder Batch Auditor.
 
 ---
 
-## Direct Signed Downloads (`v1.5.0`)
+## Direct Signed Downloads (`v1.6.0`)
 
 | Platform | Installer | Signing & Verification | Direct Download |
 | --- | --- | --- | --- |
-| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.5.0_aarch64.dmg` (59.4 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lektpdf.com/download/macos) |
-| **Windows 10/11 x64 (Standard)** | `Lekt_1.5.0_x64-setup.exe` (56.1 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lektpdf.com/download/windows) |
-| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.5.0_x64_en-US.msi` (60.9 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lektpdf.com/download/windows-msi) |
-| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.5.0 artifacts | [View SHA256SUMS.txt](https://lektpdf.com/download/SHA256SUMS.txt) |
+| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.6.0_aarch64.dmg` (59.4 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lektpdf.com/download/macos) |
+| **Windows 10/11 x64 (Standard)** | `Lekt_1.6.0_x64-setup.exe` (56.1 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lektpdf.com/download/windows) |
+| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.6.0_x64_en-US.msi` (60.9 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lektpdf.com/download/windows-msi) |
+| **Microsoft Store (Windows 10/11)** | `XP8BTZ1QSKF5HH` | Official Microsoft Store Win32 Listing | [View in Microsoft Store](https://apps.microsoft.com/store/detail/XP8BTZ1QSKF5HH) |
+| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.6.0 artifacts | [View SHA256SUMS.txt](https://lektpdf.com/download/SHA256SUMS.txt) |
 
-### Verify Download Checksums (`v1.5.0`)
+### Verify Download Checksums (`v1.6.0`)
 
 ```text
-6d8af871dd6764648adcebf89e41213d56c86a7e5451ffccdd27d824343b2d20  Lekt_1.5.0_aarch64.dmg
-07c1e5f3fc683bfcdcc18eabffb56ecf208576da7f48f175737ab7901e40ba67  Lekt_1.5.0_x64-setup.exe
-afe5eadd5f0828610998ac2b54af36b552cce4e3b97dac437eb1de892933f031  Lekt_1.5.0_x64_en-US.msi
+574a71e3b4f02d9596760ad5c4fbef3258e796c7ba64728c0eae3e2e42a76390  Lekt_1.6.0_aarch64.dmg
+43f533a7cbd377862e523f6043d85286ece3ba65ea3f4f375f36ea76023635c2  Lekt_1.6.0_aarch64.app.tar.gz
+3fbdb101df1334910ed8d45e976ec63855017c787ecff1f6739288c51bd123f1  Lekt_1.6.0_x64-setup.exe
+c6b5baaf90797dab136fa3ffdfc6ce2f807cc10931d43c310c8f898c43efb3f1  Lekt_1.6.0_x64_en-US.msi
 ```
 
 ---
 
 ## Feature & Tool Comparison
 
-| Capability | Lekt v1.5.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
+| Capability | Lekt v1.6.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
 | --- | --- | --- | --- | --- | --- |
 | **macOS Apple Silicon Native** | Yes (pure `arm64`) | No (Windows only) | Yes | Yes | No (Windows only) |
 | **Windows x64 Native** | Yes | Yes | Yes | Yes | Yes |

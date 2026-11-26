@@ -2,6 +2,15 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.6.0] — 2026-11-26
+### Added & Improved
+- **Deep Nested Reading Order & Slot-Preserving Reorder:** Removed the legacy `depth <= 3` cap in `PdfInspector` and `ReadingOrderPanel`, surfacing deeply nested block structures (`Part › Sect › Div › P`) with container breadcrumb badges while keeping unmentioned inline siblings (`<Span>`, `<Link>`, `<Annot>`) pinned at their exact original `/K` slot indices.
+- **Multi-Select Batch Role Switching & Group Move:** Select multiple sibling blocks to batch-retag (`P` ↔ `H1`–`H6`, `Caption`, `BlockQuote`, `Note`/`FENote`) or move block groups together—including safe slot-bounded reordering when filtered to a single page (`Page N`) and automatic PDF/UA-2 (`http://iso.org/pdf2/ssn`) `<Note>` → `<FENote>` + nested `<P>` flattening.
+- **Lossless `<L>` List & Cross-Page `<P>` Merge + `<Div>` Unwrap:** Merge fragmented single-item `<L>` lists into one semantic `<L>` or combine split multi-line/cross-page `<P>` paragraphs (preserving inherited `/Pg` page bindings), and unwrap redundant `<Div>`/`<NonStruct>` wrappers cleanly (wrapping bare MCID runs into `<P>` under ISO 32005 `<Sect>`/`<Document>` containers).
+- **Named Unlimited Undo/Redo & Canvas-to-Panel Auto-Scroll:** Every snapshot records a human-readable action label in the Undo/Redo toolbar tooltips, and clicking any canvas Reading Zone scrolls both `Screen Reader Preview` and `Reading Order` directly to the matching card.
+### Hardened
+- **Strict 0px Diff & Process-Global PDFium Serialization:** Extended the 150 DPI 0-pixel visual diff gate to single/batch `/Artifact` conversion and layout-table unwrap, serialized PDFium library lifecycle across concurrent threads, and verified packaged engine daemon version parity (`ping.version === 1.6.0`) across macOS, Windows, and Mac App Store builds.
+
 ## [1.5.0] — 2026-11-26
 ### Added & Improved
 - **Free Ephemeral 1-Click Fix Preview (`previewAutofix`):** Free Checker users can now test Lekt's full remediation engine (Native Vector Auto-Tag + Tier-1 Safe Auto-Fix + 150 DPI PDFium 0px visual diff verification) on any digital PDF inside an isolated ephemeral buffer—verifying exact post-fix veraPDF rule/check counts without touching the active document.

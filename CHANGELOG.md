@@ -2,6 +2,21 @@
 
 All notable releases of **Lekt** (`com.jianlanzhiwei.lekt`) are documented here.
 
+## [1.8.0] — 2026-11-28
+### Added & Improved
+- **Batch Auditor Row Selection, Search & By-Clause Filter Bar:** Select individual files via row checkboxes for targeted **Batch Auto-Fix** or **Batch Vector Auto-Tag / Offline OCR**, filter instant matches by filename, title, or clause, and click aggregated **By Clause** chips (`[06-002]`, `[15-003]`, `[13-004]`, etc.) to isolate affected documents across large department folders.
+- **Keep-Original-Name Separate-Folder Batch Exports:** Added a `"Keep Original Name (Separate Folder)"` batch naming mode alongside `_PDFUA_Fixed.pdf` / `_OCR_PDFUA.pdf` suffixes—enforcing strict separate-folder validation (never touching source folders or nested source subfolders, with `O_CREAT | O_EXCL` collision protection) so institutional web archives keep stable filenames across multi-pass remediation.
+- **Structured `JSON` Compliance Report Export (`lekt-compliance-audit-v1`):** Export machine-readable `JSON` compliance reports alongside `CSV` and printable `HTML` in both single-document and 500-PDF folder batch workflows for CI/CD pipelines and institutional ADA Title II / EU EAA records.
+- **Transparent `>500`-PDF Discovery Alert & Stale-Profile Re-Scan Banner:** Folders containing more than 500 PDFs now report total discovered files (`totalDiscovered` + `truncated` alert) instead of truncating silently, and switching the top validation profile (`PDF/UA-1` ↔ `PDF/UA-2` ↔ `WCAG 2.2`) displays an immediate 1-click **Re-scan** notice on open batch reports.
+- **Page-Level Batch OCR Progress, Mid-PDF Cancel & Multi-Pass Action History:** Long multi-page scanned PDFs in Batch OCR now emit per-page progress (`file.pdf (p.k/N)`) and stop immediately at the current page boundary when cancelled, while multi-pass runs (**Batch OCR / Vector Auto-Tag** → **Batch Auto-Fix**) preserve full cumulative `actionsApplied` history.
+### Fixed & Hardened
+- **PDF/UA-2 Table Span & Forbidden `ToUnicode` Matterhorn Mapping:** Mapped ISO 14289-2 `8.2.5.26-4` (`RowSpan`/`ColSpan` grid mismatch) accurately to Matterhorn `15-002` instead of `15-003` (`TH /Scope`), and mapped `7.21.7-2` / `8.4.5.5.1-2` (`U+0000` / `U+FEFF` / `U+FFFE` forbidden `ToUnicode` codepoints) to `10-001` (`source_required`) with plain-English source re-export guidance.
+- **Complex Table `/Headers` Cell ID Editor & Post-Fix Batch Triage Refresh:** Added visual `/Headers` ID linking (`headerCellIds` + `/IDTree` synchronization) in the 2D logical **Tables** grid inspector for irregular multi-level header tables, and refreshed post-remediation human-review counts (`missingAltCount`, `unresolvedTableCount`, `missingFormTipCount`) immediately after Batch Auto-Fix / OCR.
+
+## [1.7.1] — 2026-11-27
+### Added & Improved
+- **Guided Human Confirmation for Free Watermarked Proof PDF (`preflightWatermarkedProof`):** When a PDF contains complex tables or figures requiring human semantic confirmation (`TH /Scope` or `Figure /Alt`), Lekt pre-crops figure previews with offline OS OCR suggestions and walks users through confirming them in one guided modal so exported Proof PDFs reach `0` machine errors in **PAC 2024**, **Adobe Acrobat Full Check**, and **veraPDF**.
+
 ## [1.7.0] — 2026-11-26
 ### Added & Improved
 - **Free Watermarked Proof PDF Export (`exportProofPdf`):** Free Checker users can now run Lekt's full offline automated remediation (**Native Vector Auto-Tag**, **Offline OS OCR**, and **1-Click Safe Auto-Fix**) on any PDF and export a real remediated Proof PDF (`Cmd/Ctrl+Shift+P`). Every verification curve is rendered as pure cubic-Bezier glyph outlines (`BlendMode.MULTIPLY`, zero text operators, zero font dependencies) strictly wrapped inside ISO 14289 `/Artifact BMC...EMC`—allowing independent `0`-error verification in **PAC 2024**, **Adobe Acrobat Pro Accessibility Full Check**, **veraPDF**, and **NVDA/JAWS** with zero screen-reader noise and zero WCAG 2.2 contrast regressions before purchasing.

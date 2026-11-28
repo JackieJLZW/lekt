@@ -1,7 +1,7 @@
 # Lekt — 100% Offline PDF/UA-1, PDF/UA-2 & WCAG 2.2 Accessibility Checker & Visual Remediator
 
 [![Website](https://img.shields.io/badge/Website-lektpdf.com-059669)](https://lektpdf.com/)
-[![Latest Release](https://img.shields.io/badge/Release-v1.7.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
+[![Latest Release](https://img.shields.io/badge/Release-v1.8.0-102a4c)](https://github.com/JackieJLZW/lekt/releases/latest)
 [![Platforms](https://img.shields.io/badge/Platforms-macOS%20Apple%20Silicon%20%7C%20Windows%20x64-1d4ed8)](https://lektpdf.com/#download)
 [![Microsoft Store](https://img.shields.io/badge/Microsoft%20Store-XP8BTZ1QSKF5HH-0078d4)](https://apps.microsoft.com/store/detail/XP8BTZ1QSKF5HH)
 [![Offline](https://img.shields.io/badge/Processing-100%25%20Offline%20%7C%200%20Telemetry-065f46)](https://lektpdf.com/privacy)
@@ -20,35 +20,35 @@
 - **100% Offline & Air-Gapped Safe:** Zero PDF files, extracted text, images, or usage telemetry ever leave your device. Built for **FERPA**, **HIPAA**, **ADA Title II**, **EU EAA**, legal, and municipal workflows.
 - **0px Visual Diff + Damaged XRef Recovery:** Every remediation enforces a 150 DPI 0-pixel visual diff gate, and files with broken Acrobat hybrid XRef tables or trailing bytes after `%%EOF` open cleanly in Parser Recovery Mode for 1-click XRef normalization.
 - **Hybrid & Selective Offline OS OCR (2-Column):** Auto-tag scanned/image-only pages using Apple Vision (macOS) or Windows WinRT OCR with automatic 2-column academic layout detection—preserving vector tables and forms on digital pages.
-- **Visual Remediation & WCAG 2.2 AA Accessible UI:** Deep nested reading order (`Part › Sect › Div`) with drag-and-drop or keyboard (`Alt+↑/↓`) reorder, multi-select batch semantic re-tagging (`P` ↔ `H1`–`H6`), lossless `<L>` list & cross-page `<P>` merge, `<Div>` container unwrap, named unlimited Undo/Redo, 1-click `7.1-3` Untagged → `/Artifact`, Table `<TH>`/`<TD>` + `Scope` + `RowSpan`/`ColSpan` grid inspector, Unwrap layout tables, Form `<Form>`/`/TU` editor, Batch Figure Alt-Text drawer, and 500-PDF Folder Batch Auditor.
+- **Visual Remediation & WCAG 2.2 AA Accessible UI:** Deep nested reading order (`Part › Sect › Div`) with drag-and-drop or keyboard (`Alt+↑/↓`) reorder, multi-select batch semantic re-tagging (`P` ↔ `H1`–`H6`), lossless `<L>` list & cross-page `<P>` merge, `<Div>` container unwrap, named unlimited Undo/Redo, 1-click `7.1-3` Untagged → `/Artifact`, Table `<TH>`/`<TD>` + `Scope` + `RowSpan`/`ColSpan` + `/Headers` ID grid inspector, Unwrap layout tables, Form `<Form>`/`/TU` editor, Batch Figure Alt-Text drawer, and 500-PDF Folder Batch Auditor (row selection, By-Clause filtering, Keep-Original-Name separate-folder exports, and CSV/JSON/HTML compliance reports).
 
 ---
 
-## Direct Signed Downloads (`v1.7.0`)
+## Direct Signed Downloads (`v1.8.0`)
 
 | Platform | Installer | Signing & Verification | Direct Download |
 | --- | --- | --- | --- |
-| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.7.0_aarch64.dmg` (59.5 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lektpdf.com/download/macos) |
-| **Windows 10/11 x64 (Standard)** | `Lekt_1.7.0_x64-setup.exe` (56.1 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lektpdf.com/download/windows) |
-| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.7.0_x64_en-US.msi` (61.0 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lektpdf.com/download/windows-msi) |
+| **macOS 13+ (Apple Silicon M1–M4)** | `Lekt_1.8.0_aarch64.dmg` (81.2 MB) | Pure `arm64` (0 Rosetta 2) · Apple Developer ID Signed & Notarized | [Download macOS DMG](https://lektpdf.com/download/macos) |
+| **Windows 10/11 x64 (Standard)** | `Lekt_1.8.0_x64-setup.exe` (56.2 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows EXE](https://lektpdf.com/download/windows) |
+| **Windows 10/11 x64 (Enterprise MSI)** | `Lekt_1.8.0_x64_en-US.msi` (61.1 MB) | Certum OV Authenticode Signed + RFC 3161 Timestamp | [Download Windows MSI](https://lektpdf.com/download/windows-msi) |
 | **Third-Party Proof Pack** | `Lekt_PAC_Acrobat_Verification_Pack.zip` | Real Before/After PDFs verified in PAC 2024, Acrobat & veraPDF | [Download Proof Pack](https://lektpdf.com/proof/Lekt_PAC_Acrobat_Verification_Pack.zip) |
 | **Microsoft Store (Windows 10/11)** | `XP8BTZ1QSKF5HH` | Official Microsoft Store Win32 Listing | [View in Microsoft Store](https://apps.microsoft.com/store/detail/XP8BTZ1QSKF5HH) |
-| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.7.0 artifacts | [View SHA256SUMS.txt](https://lektpdf.com/download/SHA256SUMS.txt) |
+| **Checksums** | `SHA256SUMS.txt` | Published SHA-256 hashes for all v1.8.0 artifacts | [View SHA256SUMS.txt](https://lektpdf.com/download/SHA256SUMS.txt) |
 
-### Verify Download Checksums (`v1.7.0`)
+### Verify Download Checksums (`v1.8.0`)
 
 ```text
-46e35565939623ff93e2ac2638cf1c507f9803e3c1d912b88dcacd005dedfc40  Lekt_1.7.0_aarch64.dmg
-1bdbed5216acd06509e3dc61e98c048df811c0de6a1daef0f05e40a44902bdb6  Lekt_1.7.0_aarch64.app.tar.gz
-f3b0ec9573480551a966929d90761c5ef641a9c2e5179155b0b539afcacee2f0  Lekt_1.7.0_x64-setup.exe
-a1323d635d6f051917de22e5723dacfecac413f8db9fb66ff0bddb0e0c2940b9  Lekt_1.7.0_x64_en-US.msi
+df834ba5a480c09844b0af51ac79f0ba25de574bf53f4446248ab54d05ee6ead  Lekt_1.8.0_aarch64.dmg
+5252f8dcd42368e63fb0521def918779666fbdd29d3aa2a3917c911d6af37c91  Lekt_1.8.0_aarch64.app.tar.gz
+f927f08c9e7ce839eb377ba4d920be19b0fb5d81ef0a1fc4fb9d8d1a1d011b72  Lekt_1.8.0_x64-setup.exe
+b5f8a2611b1f7ab9c94dace0a613886d32be2d8e47ca987113773b0c36fd7b4c  Lekt_1.8.0_x64_en-US.msi
 ```
 
 ---
 
 ## Feature & Tool Comparison
 
-| Capability | Lekt v1.7.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
+| Capability | Lekt v1.8.0 | PAC (2024/2026) | Adobe Acrobat Pro | PDFix Pro | CommonLook PDF |
 | --- | --- | --- | --- | --- | --- |
 | **macOS Apple Silicon Native** | Yes (pure `arm64`) | No (Windows only) | Yes | Yes | No (Windows only) |
 | **Windows x64 Native** | Yes | Yes | Yes | Yes | Yes |
